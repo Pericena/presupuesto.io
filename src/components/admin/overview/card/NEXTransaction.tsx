@@ -77,9 +77,9 @@ const NEXTransaction = () => {
               <td className={`border-r-0 border-t-0 p-2 px-4 align-middle text-sm ${item.promedio === maxAverage ? 'text-red-500' : ''}`}>
                 {Math.round(item.promedio)} 
               </td>
-                      <td class="px-2 py-1 flex items-center">
-          <span class="block h-4 w-4 rounded-full bg-green-500 mr-2"></span>
-          <span class="text-sm font-medium text-[#F5F5F5]"></span>
+                      <td className="px-2 py-1 flex items-center">
+          <span className="block h-4 w-4 rounded-full bg-green-500 mr-2"></span>
+          <span className="text-sm font-medium text-[#F5F5F5]"></span>
         </td>
             </tr>
           ))}
