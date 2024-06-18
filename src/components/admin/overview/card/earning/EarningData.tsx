@@ -31,7 +31,7 @@ const DistributionQuery = `
 
 const EarningDataComponent: React.FC = () => {
   const [loading, setLoading] = useState(true) // Estado para indicar si se están cargando los datos
-  const [error, setError] = useState<string | null>(null) // Estado para almacenar errores en la carga de datos
+ // const [error, setError] = useState<string | null>(null) // Estado para almacenar errores en la carga de datos
   const [data, setData] = useState<DistributionData | null>(null) // Estado para almacenar los datos de la distribución
   const [descripcion, setDescripcion] = useState<string | null>(null) // Estado para almacenar la descripción generada por IA
 
@@ -68,7 +68,7 @@ const EarningDataComponent: React.FC = () => {
   }, [])
 
   if (loading) return <p>Cargando...</p> 
-  if (error) return <p>Error: {error}</p> 
+  // if (error) return <p>Error: {error}</p> 
 
   // Construye los datos necesarios para el gráfico de líneas
   const chartData: ChartData<'line'> = {

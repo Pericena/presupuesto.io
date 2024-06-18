@@ -66,7 +66,7 @@ const data = [
   }
 
   // Consumir la API y mostrar la información en la página
-  fetch('152.67.56.238:5000/api/gastos')
+  fetch('http://152.67.56.238:5000/api/gastos')
     .then((response) => response.json())
     .then((data) => {
       const { total_gastos, descripcion, categorias } = data
@@ -90,30 +90,27 @@ const data = [
           <div class="flex items-center">
             <div class="cursor-pointer rounded-full bg-white text-black transition duration-300 hover:bg-gray-200 hover:shadow-md">
               <div class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white p-3 text-center text-xl text-black shadow-lg">
-                 <a target="_blank" href="http://152.67.56.238:5000/gasto">
+                <a target="_blank" href="http://152.67.56.238:5000/gasto">
       <i class="Total Balance" />
         </a>
               </div>
             </div>
             <div class="ml-2 rounded bg-emerald-500/10 p-1 text-[12px] font-semibold leading-none text-emerald-500">
-               Cantidad de Categorías:${cantidadCategorias}
+              Cantidad de Categorías:${cantidadCategorias}
             </div>
           </div>
         </div>
         <div class="text-sm font-medium text-white">Total Gasto</div>
         <a target="_blank" href="http://152.67.56.238:5000/gasto" class="text-sm font-medium text-white hover:text-black">
-         ${formatCurrency(total_gastos)} <i class="bx bx-link-external"></i>
+        ${formatCurrency(total_gastos)} <i class="bx bx-link-external"></i>
         </a>
         <div class="text-2xl font-semibold text-white">${formatCurrency(total_gastos)}</div>
       </div>
       `
-
-      // Ocultar el spinner y mostrar los datos
       loading.classList.add('hidden')
       gastosInfo.classList.remove('hidden')
     })
     .catch((error) => {
       console.error('Error al obtener los datos:', error)
-      // Manejo de errores
     })
 </script>
