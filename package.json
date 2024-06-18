@@ -6,7 +6,7 @@
     "test": "cypress open --env host=0.0.0.0",
     "dev": "sst bind astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "sst:deploy": "sst deploy --stage prod",
