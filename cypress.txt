@@ -5,7 +5,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // Implementa aquí los listeners de eventos de node
     },
-    baseUrl: 'http://localhost:4321/', // Asegúrate de que esto coincida con la URL de tu aplicación Astro
+    baseUrl: 'http://presupuestosw2.netlify.app/', // Asegúrate de que esto coincida con la URL de tu aplicación Astro
   },
 
   component: {

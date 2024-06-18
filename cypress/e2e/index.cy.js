@@ -12,7 +12,7 @@ describe('Prueba de Login', () => {
     });
 
     // Visitar la página de login antes de cada prueba
-    cy.visit('http://localhost:4321'); // Ajustar la URL según tu entorno
+    cy.visit('http://presupuestosw2.netlify.app'); // Ajustar la URL según tu entorno
   });
 
   it('Realizar login exitoso y verificar redirección a /admin', () => {
