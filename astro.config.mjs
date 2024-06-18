@@ -1,15 +1,15 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
+  site: 'https://presupuestosw2.netlify.app',
+  sitemap: true,
+  outDir: './dist', // Carpeta de salida para archivos estáticos
   integrations: [
-    react(),
-    tailwind()
+    tailwind(),
+    react()
   ],
-  output: {
-    format: 'static', // Generar archivos estáticos
-  },
   adapter: netlify(), // Adaptador para despliegue en Netlify
 });
